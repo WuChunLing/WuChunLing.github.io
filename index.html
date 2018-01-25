@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
+		<title>Order form</title>
+		<link rel="stylesheet" href="css/index.css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+		<div class="orderticket" ng-app='orderticket' ng-controller='orderticketCtrl'>
+        <h1>Order Ticket</h1>
+        <form name="orderticket-form">
+        	<div class='form-item'>
+        		<label for='city'>Choose City</label>
+        		<input type='text' id='city' name='city' ng-model='city'/>
+        	</div>
+        	<div class='form-item'>
+        		<label for='arrival'>Arrival</label>
+        		<input type='date' id='arrival' name='arrival' ng-model='arrival'/>
+        	</div>
+        	<div class='form-item'>
+        		<label for='departure'>Departure</label>
+        		<input type='date' id='departure' name='departure' ng-model='departure'/>
+        	</div>
+        	<div class='form-item'>
+        		<label for='guests'>Guests</label>
+        		<div class="range-button" ng-show='rangeView'>
+							<button id='decrease' ng-click='decreaseAccounts()'>&lsaquo;</button>
+			        <span id='accounts' ng-click='changeRangeView1()'>{{accounts}}</span>
+			        <button id="increase" ng-click='increaseAccount()'>&rsaquo;</button>
+						</div>
+						<div class="range-slider" ng-show='!rangeView'>
+							<button>0</button>
+			        <input type='range' min='0' max='10' step='1' id='range' ng-blur="changeRangeView2()" ng-model='accounts'/>
+			        <button>10</button>
+						</div>
+        	</div>
+        	<div class='form-item'>
+        		<input type='submit' value='Create Order'/>
+        	</div>
+        </form>
+		</div>
+	</body>
+	<script src="js/jquery.min.js" charset="utf-8"></script>
+	<script src="js/angular.min.js" charset="utf-8"></script>
+	<script src="js/controller.js" charset="utf-8"></script>
+</html>
