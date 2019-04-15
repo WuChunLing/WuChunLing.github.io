@@ -33,8 +33,56 @@ a:hover {
 }
 li {
   line-height: 28px;
-  text-align: center;
 }
 .page {
   font-weight: bold;
+}
+.myli {
+  position: relative;
+}
+.line {
+  position: absolute;
+  top: 14px;
+  left: 6px;
+  height: 100%;
+  border-left: 2px solid #e8e8e8;
+}
+.content a {
+  display: block;
+}
+.content img {
+  width: 100px;
+  height: 100px;
+}
+li .content {
+  display: block;
+  position: relative;
+  top: -20px;
+  margin: 0 0 0 30px;
+}
+.dot {
+  color: #1890ff;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 2px solid #1890ff;
+  border-radius: 100px;
+}
+.last-line {
+  display: none;
+}
+@media screen and (max-width:768px) {
+  .title {
+    width: 260px;
+  }
+  .panel {
+    position: static;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 40px 20px;
+  }
+  .ul {
+    padding: 50px 30px;
+  }
 }
