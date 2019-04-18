@@ -27,6 +27,7 @@ a:hover {
   border: 1px solid #000;
   padding:  50px 80px 40px 80px;
   list-style: none;
+  max-width:580px;
 }
 li {
   line-height: 28px;
