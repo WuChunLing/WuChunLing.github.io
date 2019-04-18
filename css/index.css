@@ -1,3 +1,16 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.content .row-div img {
+  width: 160px;
+  height: 160px;
+}
 .panel {
   display: flex;
   flex-direction: column;
